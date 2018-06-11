@@ -16,15 +16,18 @@ export class WhileDirective {
 
   ngOnInit(){
     console.log(this.itemsArray);
-    for (let i = 0; i < this.itemsArray.length; i += 1) {
-      console.log(this.itemsArray[i]);
-      const newItem = this.renderer.createElement('li');
-      const text = this.renderer.createText(Object.keys(this.itemsArray[i])[0]);
-      const parent = this.el.nativeElement; 
-      console.log('parent: ', parent);
-  
-      this.renderer.appendChild(newItem, text);
-      this.viewContainer.createEmbeddedView(this.templateRef);
-    };   
+    // for (let i = 0; i < this.itemsArray.length; i += 1) {
+      // console.log(this.itemsArray[i]);
+      // const newItem = this.renderer.createElement('li');
+      // const text = this.renderer.createText(Object.keys(this.itemsArray[i])[0]);
+      // const parent = this.viewContainer.el.nativeElement; 
+      // this.renderer.appendChild(newItem, text);
+      // this.viewContainer.createEmbeddedView(this.templateRef);
+    // };   
+
+    this.itemsArray.forEach(item => {
+      console.log('item: ', item);
+      this.viewContainer.createEmbeddedView(this.templateRef)
+    });
   }
 }

@@ -1,7 +1,8 @@
 <dir>
   <h1>The items list</h1>
   <!-- <ul *appWhile="let item of itemsArray; let i = index"> -->
-  <ul *appWhile="itemsArray">
+  <ul *appWhile="let item">
+    <li>{{ item }}</li>
   </ul>
 </dir>
 
