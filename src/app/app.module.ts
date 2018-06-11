@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { WhileDirective } from './while.directive';
+import { PriorityDirective } from './priority.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WhileDirective
+    WhileDirective,
+    PriorityDirective
   ],
   imports: [
     BrowserModule
