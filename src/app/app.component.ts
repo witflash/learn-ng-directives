@@ -9,11 +9,11 @@ export class AppComponent {
   title = 'app';
 
   public itemsArray: Array<any> = [
-    { 'Normal list item': 1 },
-    { 'Important list item': 2 },
-    { 'Another normal list item': 1 },
-    { 'Just normal list item again': 1 },
-    { 'And important list item too': 2 },
+    { title: 'Normal list item', priority: 1 },
+    { title: 'Important list item', priority: 2 },
+    { title: 'Another normal list item', priority: 1 },
+    { title: 'Just normal list item again', priority: 1 },
+    { title: 'And important list item too', priority: 2 },
   ];
 
   showAllItems() {

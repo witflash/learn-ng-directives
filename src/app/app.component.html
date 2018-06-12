@@ -2,7 +2,7 @@
   <h1>The items list</h1>
   <!-- <ul *appWhile="let item of itemsArray; let i = index"> -->
   <ul>
-    <li *appWhile="let item of itemsArray" [priority]="item">{{ item }}</li>
+    <li *appWhile="let item of itemsArray" [priority]="item.priority">{{ item.title }}</li>
   </ul>
 </dir>
 

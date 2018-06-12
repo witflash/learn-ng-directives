@@ -14,8 +14,7 @@ export class WhileDirective {
 
   ngOnInit() {
     this.itemsArray.forEach(item => {
-      const key = Object.keys(item)[0];
-      this.viewContainer.createEmbeddedView(this.templateRef, { $implicit: key });
+      this.viewContainer.createEmbeddedView(this.templateRef, { $implicit: item });
     });
   }
 }

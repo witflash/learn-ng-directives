@@ -4,12 +4,14 @@ import { Directive, ElementRef, Input } from '@angular/core';
   selector: '[priority]',
 })
 export class PriorityDirective {
-  @Input('priority') item: string;
-  @Input() itemsArray: Array<any>;
+  @Input('priority') priority: string;
   constructor(private elementRef: ElementRef) {}
 
   ngOnInit() {
-    console.log(this.item);
-    console.log(this.itemsArray);
+    if (this.priority == '1') {
+      this.elementRef.nativeElement.style.color = 'green';
+    } else if (this.priority == '2') {
+      this.elementRef.nativeElement.style.color = 'tomato'
+    }
   }
 }
