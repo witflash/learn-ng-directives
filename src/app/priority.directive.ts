@@ -5,13 +5,19 @@ import { Directive, ElementRef, Input } from '@angular/core';
 })
 export class PriorityDirective {
   @Input('priority') priority: string;
-  constructor(private elementRef: ElementRef) {}
+
+  constructor(
+    private elementRef: ElementRef,
+    // private color: string
+  ) {}
 
   ngOnInit() {
+    let color;
     if (this.priority == '1') {
-      this.elementRef.nativeElement.style.color = 'green';
+      color = 'green';
     } else if (this.priority == '2') {
-      this.elementRef.nativeElement.style.color = 'tomato'
+      color = 'tomato'
     }
+    this.elementRef.nativeElement.style.color = color;
   }
 }
